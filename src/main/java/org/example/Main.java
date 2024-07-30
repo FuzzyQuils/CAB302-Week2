@@ -93,9 +93,9 @@ public class Main {
         User user = authService.signUp(username, password);
 
         if (user != null){
-            System.out.printf("User " + user.getUsername() + "has been created successfully!");
+            System.out.println("User " + user.getUsername() + "has been created successfully!");
         } else if (user == null){
-            System.out.printf("The username is already taken!");
+            System.out.println("The username is already taken!");
         }
     }
 
