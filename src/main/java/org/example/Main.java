@@ -24,7 +24,7 @@ public class Main {
      * Application entrypoint.
      */
     public static void main (String[] args) {
-        users.Add(new User("test", "test"));
+        users.add(new User("test", "test"));
         while (isRunning) {
             showMenu();
         }
@@ -77,7 +77,8 @@ public class Main {
         String password = scanner.nextLine();
         User user = authService.logIn(username, password);
         System.out.println("Welcome, " + user.getUsername() + "!");
-        /* TODO: add to-do list operations. */
+        toDoList thisUsersToDoList = new toDoList(user);
+        thisUsersToDoList.run();
     }
 
     /**
